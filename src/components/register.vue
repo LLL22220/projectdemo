@@ -42,8 +42,6 @@
              <a-button style="margin-left: 10px">
                <router-link :to="{name:'login',params:{username:form.username,password:form.password}}">去登录</router-link> 
             </a-button>
-           <a-button style="margin-left: 10px"
-           @click="ceshi()">测试</a-button>
           </a-form-model-item>
         </a-form-model>
       

@@ -4,11 +4,11 @@ import Vue from 'vue'
 import login from '../components/login'
 import register from '../components/register'
 import home from '../components/home'
-import message from '../views/message'
-import other from '../views/other'
-import shop from '../views/shop'
-import users from '../views/users'
 import index from '../views/index'
+import foodlist from '../views/foodlist'
+import storelist from '../views/storelist'
+import userlist from '../views/userlist'
+import orderlist from '../views/orderlist'
 
 
 const originalPush = VueRouter.prototype.push;
@@ -41,25 +41,26 @@ const router = new VueRouter({
                     component: index
                 },
                 {
-                    path: '/home/message',
-                    name:'message',
-                    component: message
+                    path: '/home/storelist',
+                    name:'storelist',
+                    component: storelist
                 },
                 {
-                    path: '/home/other',
-                    name:'other',
-                    component: other
+                    path: '/home/foodlist',
+                    name:'foodlist',
+                    component: foodlist
                 },
                 {
-                    path: '/home/shop',
-                    name:'shop',
-                    component: shop
+                    path: '/home/userlist',
+                    name:'userlist',
+                    component: userlist
                 },
                 {
-                    path: '/home/users',
-                    name:'users',
-                    component: users
+                    path: '/home/orderlist',
+                    name:'orderlist',
+                    component: orderlist
                 },
+  
             ]
         }
 

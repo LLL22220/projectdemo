@@ -1,11 +1,6 @@
 <template>
   <div class="index">
-    <a-carousel :after-change="onChange()">
-      <div><img src="../ghj8a1yy.png"></div>
-      <div><img src="../ghj8a1yy.png"></div>
-      <div><img src="../ghj8a1yy.png"></div>
-      <div><img src="../ghj8a1yy.png"></div>
-    </a-carousel>
+    <span>欢迎使用</span>
   </div>
 </template>
 
@@ -20,27 +15,20 @@ export default {
     };
   },
   methods: {
-    onChange(a, b, c) {
-      window.console.log(a, b, c);
-    },
+
   },
 };
 </script>
 
 <style scoped>
 .index {
-  height: 92%;
-  border: solid 5px;
+  height: 100%;
+  display: flex;
+  background-image: url("../img/login.jpg");
+  background-size: cover;
 }
-.ant-carousel >>> .slick-slide {
-  text-align: center;
-  height: 800px;
-  width: 10%;
-  background: #364d79;
-  overflow: hidden;
-}
-
-.ant-carousel >>> .slick-slide h3 {
-  color: #fff;
+.index span{
+  font-size: 50px;
+  margin: auto;
 }
 </style>

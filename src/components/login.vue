@@ -73,9 +73,9 @@
             >
           </a-form-model-item>
         </a-form-model>
-        <button @click="ceshi()">测试</button>
       </a-col>
     </a-row>
+    <button @click="ceshi()">12312312312</button>
   </div>
 </template>
 
@@ -85,7 +85,7 @@ export default {
   created() {
     if (
       JSON.stringify(this.$route.params) === "{}" ||
-      JSON.stringify(this.$route.params.username) == ""
+      JSON.stringify(this.$route.params.username) === ""
     ) {
       window.console.log();
     } else {
@@ -97,10 +97,10 @@ export default {
   },
   methods: {
     ceshi() {
-      // window.console.log(JSON.stringify(this.$route.params.username));
-      // window.console.log(this.$route.params);
-      // window.console.log(this.users);
-      // window.console.log(this.data);
+       window.console.log(JSON.stringify(this.$route.params.username));
+       window.console.log(this.$route.params);
+       window.console.log(this.users);
+       window.console.log(this.data);
     },
     getdata(a) {
       this.data = a;
@@ -110,7 +110,7 @@ export default {
     //   this.$router.push("/register");
     // },
     home() {
-      this.$router.push("/home");
+      this.$router.push("/home/index");
     },
     login() {
       // 取输入值
