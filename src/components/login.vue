@@ -84,23 +84,21 @@ import HomeView from "../views/HomeView.vue";
 export default {
   created() {
     if (
-      JSON.stringify(this.$route.params) === "{}" ||
-      JSON.stringify(this.$route.params.username) === ""
+      Object.keys(this.$route.params).length > 1 &&
+      this.$route.params.username !== ""
     ) {
-      window.console.log();
-    } else {
       this.users.push(this.$route.params);
-    }
+    } 
   },
   components: {
     HomeView,
   },
   methods: {
     ceshi() {
-       window.console.log(JSON.stringify(this.$route.params.username));
-       window.console.log(this.$route.params);
-       window.console.log(this.users);
-       window.console.log(this.data);
+      window.console.log(JSON.stringify(this.$route.params.username));
+      window.console.log(this.$route.params);
+      window.console.log(this.users);
+      window.console.log(this.data);
     },
     getdata(a) {
       this.data = a;
@@ -123,7 +121,7 @@ export default {
       let user = this.users.find(function (users) {
         return users.username === username && users.password === password;
       });
-      let end = user && this.data
+      let end = user && this.data;
       if (end) {
         this.home();
       } else {
@@ -148,7 +146,7 @@ export default {
         password: [{ required: true, message: "请输入你的密码" }],
         yanzhengma: [{ required: true, message: "请输入验证码" }],
       },
-      data:'',
+      data: "",
     };
   },
 };
